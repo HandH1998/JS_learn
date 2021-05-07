@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict';
+        // function qj(){
+        //     var x=1;
+        //     x=x+1;
+        // }
+        // x=x+2;//Uncaught ReferenceError: x is not defined
+
+        // function qj(){
+        //     var x=1;
+        //     //内部函数可以访问外部函数的成员，反之不行
+        //     function qj2(){
+        //         var y=x+1;
+        //         console.log(y);
+        //     }
+        //     qj2();
+        //     var z=y+1;//y is not defined
+        //     console.log(z);
+        // }
+
+        // function qj(){
+        //     var x=1;
+        //     function qj2(){
+        //         var x='A';
+        //         console.log('inner'+x);//innerA
+        //     }
+        //     qj2();
+        //     console.log('outer'+x);//outer1
+        // }
+
+        // function qj(){
+        //     var x="x"+y;
+        //     console.log(x);
+        //     var y='y';
+        // }
+
+        // var x=1;
+        // function f(){
+        //     console.log(x);
+        // }
+        // console.log(x);
+
+        // var x='xxxx';
+        // alert(x);
+        // alert(window.x);//默认所有的全局变量，都会自动绑定在window对象下
+        // window.alert(x);
+
+        // var x='xxx';
+        // window.alert(x);
+        // var old_alert=window.alert;
+        // old_alert(x);
+
+        // window.alert=function(){
+
+        // }
+        // //发现alert失效了
+        // window.alert(x);
+        // //恢复
+        // window.alert=old_alert;
+        // window.alert(456);
+
+        // //唯一全局变量
+        // var KuangApp={};
+
+        // //定义全局变量
+        // KuangApp.name='kuangshen';
+        // KuangApp.add=function(a,b){
+        //     return a+b;
+        // }
+
+        // function aaa(){
+        //     for(var i=0;i<100;i++){
+        //         console.log(i);
+        //     }
+        //     console.log(i+1);//101  i出了for循环还可以使用
+        // }
+
+        // function aaa(){
+        //     for(let i=0;i<100;i++){
+        //         console.log(i);
+        //     }
+        //     console.log(i+1);//i is not defined
+        // }
+
+        const PI='3.14';
+        console.log(PI);
+        PI='123';//报错
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

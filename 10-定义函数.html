@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //定义方式一
+        // function abs(x){
+        //     // //手动抛出异常
+        //     // if(typeof x !== "number"){
+        //     //     throw "Not a number";
+        //     // }
+        //     console.log("x=>"+x);
+        //     for(var i=0;i<arguments.length;i++){
+        //         console.log(arguments[i]);
+        //     }
+            
+        //     if(x>=0){
+        //         return x;
+        //     }else{
+        //         return -x;
+        //     }
+        // }
+
+        //定义方式二
+        // var abs=function(x){
+        //     if(x>=0){
+        //         return x;
+        //     }else{
+        //         return -x;
+        //     }
+        // }
+        function test(a,b,...rest){
+            console.log("a=>"+a);
+            console.log("b=>"+b);
+            console.log(rest);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

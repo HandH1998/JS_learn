@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //es6
+        // Map
+        var map=new Map([["tom",100],["jack",300],["haha",200]])//定义
+        console.log(map.get("jack"))//通过键获得值
+        map.set("admin",234);//增加
+        console.log(map.get("admin"));
+        map.delete("tom");//删除
+
+        //Set
+        var set=new Set([12,34,23,2,2,34,3,3]);
+        console.log(set);
+        set.forEach(ele => {
+            console.log(ele);
+        });
+        set.add(78);//增加
+        set.delete(78);//删除
+        console.log(set.has(3));//判断是否有该元素
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
