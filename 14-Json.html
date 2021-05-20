@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user = {
+            name: "qinjiang",
+            age: 3,
+            sex: '男'
+        }
+        //对象转化为json字符串
+        var jsonUser = JSON.stringify(user);
+        //json字符串转化为对象，参数为JSON字符串
+        var obj = JSON.parse(jsonUser);
+        //外双里单，外单里双
+        var s = JSON.parse('{"name":"qinjiang","age":3,"sex":"男"}'); 
+    </script>
+</body>
+
+</html>
