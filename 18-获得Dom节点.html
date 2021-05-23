@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="father">
+        <h1>
+            标题一
+        </h1>
+        <p id="p1">p1</p>
+        <p class="p2">p2</p>
+    </div>
+    
+    <script>
+        //对应css选择器
+        var h1=document.getElementsByTagName("h1");//得到的是数组
+        var p1=document.getElementById("p1");//得到的是单个节点
+        var p2=document.getElementsByClassName("p2");//得到的是数组
+        var father=document.getElementById("father");
+        //获取父节点下的所有子节点
+        var childrens=father.children;
+        //获取第一个子节点
+        var fir_child=father.firstChild;
+        //获取最后一个子节点
+        var last_child=father.lastChild;
+        //前一个节点
+        var next_sibling=fir_child.nextSibling;
+        //后一个节点
+        var previous_sibling=last_child.previousSibling;
+    </script>
+</body>
+</html>

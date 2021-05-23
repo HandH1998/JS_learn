@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="js">JavaScript</p>
+    <div id="list">
+        <p id="se">JavaSE</p>
+        <p id="ee">JavaEE</p>
+        <p id="me">JavaME</p>
+    </div>
+    
+    <script>
+        //已存在的节点
+        var js=document.getElementById("js");
+        var list=document.getElementById("list");
+        //将js追加到list
+        list.append(js);
+        //创建一个新标签然后插入
+        var newP=document.createElement('p');
+        newP.id='newP';
+        newP.innerText='Hello,sb!';
+        list.append(newP);
+
+        //创建一个标签，之后设置属性
+        var myScript=document.createElement('script');
+        //对于新建的节点设置属性和属性值
+        myScript.setAttribute('type','text/javascript');
+        list.append(myScript);
+        //注意获取的body是数组
+        var body=document.getElementsByTagName('body');
+        body[0].setAttribute('style','background-color:red')
+        // body[0].style.background="#a9475b";
+
+        //创建一个style标签
+        var myStyle=document.createElement("style");
+        myStyle.setAttribute('type','text/css');
+        myStyle.innerHTML='body{background-color:blue;}';
+        document.getElementsByTagName('head')[0].append(myStyle);
+    </script>
+</body>
+</html>

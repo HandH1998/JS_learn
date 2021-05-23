@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单级别提交onsubmit -->
+    <form action="#" method="post" id="form" onsubmit="return preprocess()">
+        <p>
+            <span>用户名：</span><input type="text" id="username" name="username">
+        </p>
+        <p>
+            <span>密码：</span><input type="password" id="password">
+        </p>
+        <p>
+            <input type="hidden" id="hidden-password" name="password">
+        </p>
+        <!-- 按钮级别绑定提交事件onclick -->
+        <button type="submit">提交</button>
+        <!-- <button type="button" onclick="preprocess()">提交</button> -->
+
+    </form>
+    <script>
+        function preprocess(){
+            var uname=document.getElementById("username");
+            var pwd=document.getElementById("password");
+            var hidden_pwd=document.getElementById("hidden-password");
+            //pwd.value='123';
+            //这样写提交时会有密码突然边长的情况
+            //pwd.value=md5(pwd.value);
+            //使用隐藏的密码框提交，可以避免提交时显示密码突然边长
+            //hidden_pwd.value=md5(pwd.value);
+            //true 可以提交  false 不能提交
+            return false;
+        }
+    </script>
+</body>
+</html>
